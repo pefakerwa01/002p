@@ -1,0 +1,67 @@
+/* General Styling */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: transparent;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* Overlay Container */
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* TOP LAYER */
+#top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    transition: background 1s ease-in-out;
+}
+
+/* Left Side (⅓ Width, Slightly Above) */
+.top-left {
+    width: 33%;
+    font-size: 1.5rem;
+    position: relative;
+    top: -10px;
+    font-weight: bold;
+}
+
+/* Right Side (Improved Readability) */
+.top-right {
+    width: 66%;
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: right;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Typewriting Effect (Shows Two Words, Updates Every 2 Min) */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    animation: typing 4s steps(20, end) infinite;
+}
+
+/* Flowing Bottom Animation */
+@keyframes flowing {
+    from { transform: translateX(-10px); }
+    to { transform: translateX(10px); }
+}
+
+.flowing {
+    animation: flowing 3s ease-in-out infinite alternate;
+}
